@@ -5,5 +5,3 @@ export interface WishlistItem {
 }
 
 export interface DeleteWishlistItem extends Pick<WishlistItem, 'variant_id'> {}
-
-export type WishList<T> = T[];
