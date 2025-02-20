@@ -1,6 +1,6 @@
 {
   "name": "medusa-wishlist-lite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight wishlist service for Medusa",
   "author": "Simone Guglielmi",
   "license": "MIT",
