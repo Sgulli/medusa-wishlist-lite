@@ -4,19 +4,25 @@
   "description": "A lightweight wishlist service for Medusa",
   "author": "Simone Guglielmi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sgulli/medusa-wishlist-lite"
+  },
   "keywords": [
     "sqlite",
     "postgres",
     "typescript",
     "ecommerce",
     "headless",
-    "medusa"
+    "medusa",
+    "medusa-wishlist",
+    "wishlist"
   ],
   "scripts": {
     "clean": "cross-env ./node_modules/.bin/rimraf dist",
-    "build": "cross-env npm run clean && npm run build:server && npm run build:admin",
+    "build": "cross-env npm run clean && npm run build:server",
     "build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
-    "build:admin": "cross-env medusa-admin build",
+    "prepare": "cross-env NODE_ENV=production npm run build",
     "watch": "cross-env tsc --watch",
     "test": "cross-env jest",
     "seed": "cross-env medusa seed -f ./data/seed.json",
